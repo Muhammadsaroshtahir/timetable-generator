@@ -1,3 +1,5 @@
+# Create railway.toml
+cat > railway.toml << 'EOF'
 [build]
 builder = "nixpacks"
 
@@ -10,3 +12,4 @@ startCommand = "uvicorn main:app --host 0.0.0.0 --port $PORT"
 [env]
 PORT = { default = "8000" }
 PYTHON_VERSION = { default = "3.11" }
+EOF
